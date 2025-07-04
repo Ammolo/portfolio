@@ -8,7 +8,6 @@ TODO: FIND A FONT
 
 
 GET A DESIGN BASE IDEA GOING
-
    GET A COLOUR PALATTE
     https://huemint.com/
 
