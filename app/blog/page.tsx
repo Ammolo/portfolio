@@ -30,7 +30,7 @@ export default async function Page() {
         <h1 className="font-bold text-3xl p-4">My Articles</h1>
         <div className='grid gap-6 m-auto grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 grid:md-3'>
           {posts.map(post=> (
-              <PostCard key={post} post={post}/>
+              <PostCard key={post.slug} post={post}/>
           ))}
         </div>
     

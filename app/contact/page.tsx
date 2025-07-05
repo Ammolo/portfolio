@@ -26,10 +26,21 @@ export default function Page() {
 
     const handleContact = async(e: React.FormEvent) => {
         e.preventDefault()
-        console.log(name)
-        console.log(last_name)
+        
+        /** Cheks if the user actually filled in the fields */
+        if (!name || !last_name || !email || !message) {
+            toast("Please fill out all fields before submitting.", {
+                style: {
+                    background: 'red',
+                },
+            });
+
+            return;
+        }
+        
         try {
-            const res = await resendEmail({
+
+            await resendEmail({
                 name: name,
                 last_name: last_name,
                 reply_to: email,
@@ -37,12 +48,18 @@ export default function Page() {
                 subject: 'Contact Me Email',
                 message: message,
             });
-            
-            toast("Message, sent successfully.")
-        } catch (err){
-            toast("Something went wrong please try again later.")
-        }
 
+            toast("Message, sent successfully.")
+        } catch (err : any){
+            /** Setting error message if is any, if not generic message */
+            const errMsg = err?.message || "Something Went Wrong Please Try Again";
+
+                toast(errMsg, {
+                    style: {
+                        background: 'red',
+                    },
+                });
+        }
     }
     
     return (

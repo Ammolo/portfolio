@@ -15,7 +15,7 @@ import { useState } from 'react'
  */
 export default function PhotoGallery( {images}: GalleryImages) {     
   
-  const [layout, setLayout] = useState<'grid' | 'mosaic'>('mosaic');
+  const layout = 'mosaic';
 
   // Used to repeat the images in my gallery
   const repeatedImages = Array(8)

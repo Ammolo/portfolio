@@ -20,8 +20,10 @@ export default function PostCard({ post }: { post: BlogPostInfo }) {
         <Card className="hover:shadow-lg shadow-accent transition-all duration-300 pt-0 overflow-hidden">
             <div className="overflow-hidden">
                 <Image
-                    src='https://placehold.co/640x480'
+                    src='https://placehold.co/640x480.png'
                     alt={post.title}
+                    width={640}
+                    height={469}
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
                 />
             </div>
@@ -32,7 +34,7 @@ export default function PostCard({ post }: { post: BlogPostInfo }) {
                 <Link href={`/blog/${post.slug}`} className="">
                     
                     {/** Title and text Section */}
-                    <div className="">
+                    <div className="" id={post.slug}>
                         <p className="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In cursus sollicitudin neque eu congue. 
                             Sed sollicitudin felis sed lectus finibus tincidunt. Fusce molestie, mi id volutpat ultrices,
                             ligula ligula aliquet tortor, in interdum</p>  

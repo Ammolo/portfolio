@@ -17,8 +17,9 @@ export function getPosts() {
     /** Filters out the file names for the mdx files */
     const postData = fileNames.map(file => {
         const slug = file.replace(/\.mdx$/, '')
+        const title = slug
         
-        return {slug};
+        return {slug, title};
     })
     
     /** Returns an array of the filenames that will be utilized as the slug for the pages */
