@@ -3,12 +3,10 @@
 import { validateKey } from '../key';
 import { createSession } from './session';
 
-
 /**
  * 
  * Simple function to "Authenticate" the browser
  * Uses Cookies to create a session
- * 
  * 
  */
 export async function authenticate(data: FormData){

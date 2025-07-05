@@ -1,28 +1,3 @@
-
-/**
- * Need To figure out the best way to route tings and the use of layout what and where
- * 
- * Need to sell myself here, display who i am, what i can do and how i am useful
- * 
- * GOAL
- * - Page needs to be clean
- * - Needs to load fast
- * - Yet look sleek and modern
- * - and stil be simple to navigate
- * - since this is MY space, ammolos corner
- *    - need to enjoy using it myself and brownsing
- * 
- *
- * WHAT DO I NEED ON MY Landing page
- * - Should include some of my photos
- * - Maybe widgets that link to my github
- * - where should i include my github link as well as my linked in profile
- *    - should this be included at the landing page?
- *    - one does not want this to be hidden
- *        - or should i force the user to look trough the webpage to find my github link and linked in?
- * 
- * 
- * 
  /** Root Layout for the webpage */
 
  /** Navbar and Footer Import from global components */
@@ -37,8 +12,9 @@ import type { Metadata } from "next";
 
 /** Theme Provider */
 import { ThemeProvider } from "../components/ui/theme-provider";
+import { Toaster } from "@/components/ui/sonner";
 
-// Title for this Layout
+/** Title for this Layout */
 export const metadata: Metadata = {
   title: "Ammolos Corner",
   description: "Portofolio website created by Ammolo",
@@ -63,24 +39,18 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {/* Container for the full screen height */}
           <div id="main" className="h-screen">
             <div className="min-h-screen flex flex-col">
-              
-              {/* <Navbar/> */}
               <Navbar/>
-
-              {/* Content Div */}
-              <div className="grow flex justify-center pl-6 pr-6">
-                {children}
-              </div>
-            
-              {/* <Footer/> */}
+                {/* Content Div */}
+                <div className="grow flex justify-center pl-6 pr-6 pt-4 mb-8 bg-gradient-to-b from-muted/30 to-background">
+                  {children}
+                </div>
               <Footer/>
-
             </div>
           </div>     
-        </ThemeProvider>    
+        </ThemeProvider>
+        <Toaster/>
       </body>
     </html>
   

@@ -1,4 +1,3 @@
-
 /**
  * File for the UI element for each blog post
  * 
@@ -13,17 +12,23 @@ import {
   CardTitle,
 } from "./ui/card"
 import Link from 'next/link'
- 
-export default async function PostCard({ post }: { post: any }) {    
+
+export default function PostCard({ post }: { post: any }) {    
     return (
         
-        <Card className=" rounded-none ">
-            <CardHeader>
+        <Card className="hover:shadow-lg shadow-accent transition-all duration-300 pt-0 overflow-hidden">
+            
+            <div className="overflow-hidden">
+                <img
+                    src='https://placehold.co/640x480'
+                    alt={post.title}
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+            </div>
 
-            </CardHeader>
-
+                
             <CardContent>
-                <CardTitle>{post.slug}</CardTitle>
+                <CardTitle className="mb-2">{post.slug}</CardTitle>
                 <Link href={`/blog/${post.slug}`} className="">
                     
                     {/** Title and text Section */}
@@ -36,7 +41,7 @@ export default async function PostCard({ post }: { post: any }) {
                 </Link>
 
                 <CardDescription>
-                    So this is a description for some reason?
+                    Desctiption
                 </CardDescription>
             </CardContent>
         </Card>

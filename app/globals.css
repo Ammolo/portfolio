@@ -15,7 +15,6 @@
   --accent: #34babf;
 }
 
-/** Need a bit reor5dering on these **/
 [theme-yellow-night] {
   --background: #030406;
   --extra: #1B1B1C;
@@ -24,7 +23,6 @@
   --accent: #eee4e6;
 }
 
-/** Need a bit reor5dering on these **/
 [theme-yellow-night] {
   --background: #242725;
   --extra: #aac9bd;

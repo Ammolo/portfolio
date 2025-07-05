@@ -1,18 +1,18 @@
+import Link from "next/link"
+import Image from "next/image";
+
 /**
  * 
  * Footer component used as a static component across all pages
  * 
  */
-import Link from "next/link"
-import Image from "next/image";
-
 export default function Footer() {
     return (
-        <div className="bg-background text-foreground border-t dark:border-neutral-800 mt-4" >
-            <div className="px-6 py-10 grid gap-8 grid-cols-2 ">
+        <div className="bg-background text-foreground border-t dark:border-neutral-800" >
+            <div className="px-6 py-10 grid gap-8 grid-cols-2 md:flex md:justify-between max-w-7xl md:m-auto">
                 
                 {/* Column 1 */}
-                <div className="col-span-2 ">
+                <div className="col-span-2 max-w-xl">
                     <h3 className="text-lg font-semibold mb-4 col-span-3">About Me</h3>
                     
                     <p className="text-sm">
@@ -47,21 +47,21 @@ export default function Footer() {
                     <h3 className="text-lg font-semibold mb-4">Follow Me</h3>
                     <ul className="space-y-3 text-sm">
                         <li>
-                            <a href="" className="hover:underline flex gap-2">
+                            <a href="https://github.com/Ammolo" className="hover:underline flex gap-2">
                                 
                                 <Image
                                     src="/git-dark.png"
                                     alt="Github Logo"
                                     width={25}
                                     height={25}
-                                    className="dark block:hidden"/>
+                                    className="block dark:hidden"/>
 
                                 <Image
-                                    src="/git-dark.png"
+                                    src="/git-white.png"
                                     alt="Github Logo"
                                     width={25}
                                     height={25}
-                                    className="block dark:hidden"/>
+                                    className="hidden dark:block"/>
 
                                 <span className="hidden md:inline">Github</span>
                             </a>
@@ -80,19 +80,16 @@ export default function Footer() {
                                     alt="Linked In Logo"
                                     width={25}
                                     height={25}
-                                    className="dark block:hidden"
+                                    className="hidden dark:block"
                             />
                                 <span className="hidden md:inline">Linkedin</span>
                             </a>
                         </li>
                     </ul>
                 </div>
-
-
             {/* Bottom copyright */}
-
             </div>
-            <div className="text-center text-xs text-muted-foreground py-4 border-t border-neutral-800 mt-8">
+            <div className="text-center text-xs text-muted-foreground py-4 border-t border-accent mt-8">
                 &copy; {new Date().getFullYear()} Ammar Mujezinovic. All rights reserved.
             </div>
         </div>

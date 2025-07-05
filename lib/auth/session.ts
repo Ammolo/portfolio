@@ -1,6 +1,7 @@
-import 'server only'
+'use server'
 
 import { cookies } from 'next/headers'
+import { KEY_ID } from '../const';
 
 /**
  * 
@@ -27,4 +28,23 @@ export async function createSession(key: string){
         sameSite: 'lax',
         path: '/',
     })
+}
+
+/**
+ * 
+ * Cheks if the session is valid
+ * 
+ */
+export async function veryfySession(){
+    const cookieStore = await cookies();
+    
+    const session_key = cookieStore.get(KEY_ID);
+    console.log(session_key);
+    return true;
+    
+    // if (session_key === getKey(KEY_ID)){
+    //     return true;
+    // } else {
+    //     return false:
+    // }
 }

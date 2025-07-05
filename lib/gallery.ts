@@ -11,7 +11,6 @@ import type { CloudinaryImage, GalleryImages} from '@/lib/types/cloudinary';
  *      Prehaps Implement blurDataUrl
  *      Figure out a logical way setting the max results per page basis?
  * 
- * 
  */
 export default async function getGallery(): Promise<GalleryImages>{
     

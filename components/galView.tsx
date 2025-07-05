@@ -1,5 +1,13 @@
 'use client'
 
+
+/**
+ *
+ * Component to change gallery view
+ * 
+ * TODO: Implement
+ * 
+ */
 export default function GalleryView(){
     return(
         <div>

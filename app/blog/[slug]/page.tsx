@@ -3,7 +3,7 @@
  * 
  * 
  */
-import { getPosts } from "@/lib/getFiles"
+import { getPosts } from "@/lib/files"
 
 /**
  * 
