@@ -9,7 +9,6 @@ import 'photoswipe/dist/photoswipe.css'
 
 /** PhotoGallery Component */
 import PhotoGallery from '../../components/gallery'
-import GalleryView from '../../components/galView';
 
 import getGallery from '@/lib/gallery';
 import { GalleryImages } from '@/lib/types/cloudinary';

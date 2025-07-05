@@ -4,13 +4,11 @@
  */
 import {
   Card,
-  CardAction,
   CardContent,
   CardDescription,
-  CardFooter,
-  CardHeader,
   CardTitle,
 } from "./ui/card"
+
 import Link from 'next/link'
 
 export default function PostCard({ post }: { post: any }) {    

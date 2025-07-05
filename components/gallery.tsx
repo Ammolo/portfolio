@@ -3,7 +3,7 @@
 import { Gallery, Item } from 'react-photoswipe-gallery'
 import 'photoswipe/dist/photoswipe.css'
 
-import { GalleryImages, CloudinaryImage } from '@/lib/types/cloudinary'
+import { GalleryImages } from '@/lib/types/cloudinary'
   
 import { useState } from 'react'
 
