@@ -5,11 +5,7 @@
  */
 import { getPosts } from "@/lib/files"
 
-interface PageProps {
-  params: {
-    slug: string;
-  };
-}
+type PageProps = Promise<{ slug: string[] }>;
 
 /**
  * 
@@ -19,8 +15,8 @@ interface PageProps {
  * prehaps enable fucntion to import from different folders.
  * 
  */
-export default async function Page({ params }: PageProps) {
-  const { slug } = params
+export default async function Page({ params }: {params: PageProps}) {
+  const { slug } = await params
 
   const { default: Post } = await import(`@/content/${slug}.mdx`)
   return <Post />
