@@ -10,7 +10,7 @@ const postDir = '/content'
  * Returns the slug
  * 
 */
-export function getPosts() {
+export async function getPosts() {
 
     const fileNames = fs.readdirSync(getFilenames(postDir))
     

@@ -37,9 +37,7 @@ export default function Page() {
 
             return;
         }
-        
         try {
-
             await resendEmail({
                 name: name,
                 last_name: last_name,
@@ -57,7 +55,7 @@ export default function Page() {
             if (err instanceof Error){
                 errMsg = err.message;
             }
-            
+
             /** Setting error message if is any, if not generic message */
             toast(errMsg, {
                 style: {

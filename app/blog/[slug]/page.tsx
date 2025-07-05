@@ -14,7 +14,7 @@ import { getPosts } from "@/lib/files"
  * 
  */
 export default async function Page({ params }: { params: { slug: string } }) {
-  const { slug } = await params
+  const { slug } = params
 
   const { default: Post } = await import(`@/content/${slug}.mdx`)
   return <Post />
@@ -28,8 +28,8 @@ export default async function Page({ params }: { params: { slug: string } }) {
  * but for future reference
  * 
  */
-export function generateStaticParams() {
-  const posts = getPosts()
+export async function generateStaticParams() {
+  const posts = await getPosts()
   return posts.map(post => ({ slug: post.slug }))
 }
 
