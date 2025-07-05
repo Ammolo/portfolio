@@ -34,6 +34,13 @@ export async function resendEmail(payload: MailPayload){
             subject: mail_payload.subject,
             text: mail_payload.message,
     });
+
+    if(error){
+        console.error("Failed To Send Email:", data)
+        throw new Error("Unexpected Response")
+    }
+
+    console.log("Email Was Sent Successfully,", data?.id)
 }
 
 /**
@@ -41,10 +48,10 @@ export async function resendEmail(payload: MailPayload){
  * Handle the form form the frontend here?
  * 
  */
-export async function sendFormEmail(data: FormData){
-    const formData = Object.fromEntries(data.entries())
-    // resendEmail()
+// export async function sendFormEmail(data: FormData){
+//     const formData = Object.fromEntries(data.entries())
+//     // resendEmail()
 
 
-    return await resendEmail(mail_payload)
-}
+//     return await resendEmail(mail_payload)
+// }

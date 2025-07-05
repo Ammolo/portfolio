@@ -37,6 +37,7 @@ export default function Page() {
                 subject: 'Contact Me Email',
                 message: message,
             });
+            
             toast("Message, sent successfully.")
         } catch (err){
             toast("Something went wrong please try again later.")

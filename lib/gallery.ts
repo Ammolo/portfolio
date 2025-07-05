@@ -20,9 +20,9 @@ export default async function getGallery(): Promise<GalleryImages>{
         .max_results(100)
         .execute();
     
-    let filteredResults: CloudinaryImage[] = mapResults(fetchedResults.resources);
+    const filteredResults: CloudinaryImage[] = mapResults(fetchedResults.resources);
     
-    let galProp: GalleryImages = { images: filteredResults}
+    const galProp: GalleryImages = { images: filteredResults}
 
     /** returns the results as Gallery Props */
     return galProp

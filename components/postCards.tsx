@@ -1,23 +1,25 @@
+import {
+    Card,
+    CardContent,
+    CardDescription,
+    CardTitle,
+    } from "./ui/card"
+    
+    import Image from "next/image"
+    import Link from 'next/link'
+    
+    import { BlogPostInfo } from "@/lib/types/blog-types"
+    
 /**
  * File for the UI element for each blog post
  * 
- */
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardTitle,
-} from "./ui/card"
-
-import Link from 'next/link'
-
-export default function PostCard({ post }: { post: any }) {    
+ */ 
+export default function PostCard({ post }: { post: BlogPostInfo }) {
     return (
         
         <Card className="hover:shadow-lg shadow-accent transition-all duration-300 pt-0 overflow-hidden">
-            
             <div className="overflow-hidden">
-                <img
+                <Image
                     src='https://placehold.co/640x480'
                     alt={post.title}
                     className="object-cover transition-transform duration-300 group-hover:scale-105"

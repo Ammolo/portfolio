@@ -92,7 +92,7 @@ export default function Navbar() {
                             {/* <div className='w-full hover:bg-accent'> */}
                             {/** creates a link from each of the routes in route.ts */}
                             {routes.map(route => (
-                                <div className="hover:bg-accent p-2 text-left">
+                                <div className="hover:bg-accent p-2 text-left" key={route.id}>
                                     <Link onClick={() => setOpen(false)} href={route.path}>{route.id}</Link>
                                 </div>
                             ))}
