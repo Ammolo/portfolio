@@ -19,12 +19,6 @@ import { ContactFormData } from "../types/mail-type";
  * 
  */
 export async function resendEmail(payload: MailPayload){
-    console.log("What why isnt this workign")
-    console.log(payload.name)
-    console.log(payload.last_name)
-    console.log(payload.subject)
-    console.log(payload.message)
-    console.log(payload.reciever)
     
     /** TODO: find a beter way for this... */
     mail_payload.name = payload.name;
