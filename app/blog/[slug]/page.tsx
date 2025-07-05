@@ -5,6 +5,12 @@
  */
 import { getPosts } from "@/lib/files"
 
+interface PageProps {
+  params: {
+    slug: string;
+  };
+}
+
 /**
  * 
  * Renders the currently requested post based on the slug parameter passed
@@ -13,7 +19,7 @@ import { getPosts } from "@/lib/files"
  * prehaps enable fucntion to import from different folders.
  * 
  */
-export default async function Page({ params }: { params: { slug: string } }) {
+export default async function Page({ params }: PageProps) {
   const { slug } = params
 
   const { default: Post } = await import(`@/content/${slug}.mdx`)
