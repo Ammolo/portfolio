@@ -50,15 +50,20 @@ export default function Page() {
             });
 
             toast("Message, sent successfully.")
-        } catch (err : any){
+        } catch (err){
+            
+            let errMsg = "Something Went Wrong Please Try Again";
+            
+            if (err instanceof Error){
+                errMsg = err.message;
+            }
+            
             /** Setting error message if is any, if not generic message */
-            const errMsg = err?.message || "Something Went Wrong Please Try Again";
-
-                toast(errMsg, {
-                    style: {
-                        background: 'red',
-                    },
-                });
+            toast(errMsg, {
+                style: {
+                    background: 'red',
+                },
+            });
         }
     }
     

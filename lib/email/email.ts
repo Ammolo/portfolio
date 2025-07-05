@@ -5,9 +5,6 @@ import { MailPayload } from "../types/mail-type";
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
-import emailTemplate from "./emailTemplate";
-
-import { ContactFormData } from "../types/mail-type";
 
 /**
  * 
