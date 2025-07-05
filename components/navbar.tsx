@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { routes } from '@/lib/configs/routes'
 import { useState } from 'react'
-import { motion, AnimatePresence, MotionConfig, usePresenceData } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { Button } from './ui/button'
 import { ModeToggle } from './themeSwitcher'
 
@@ -22,8 +22,8 @@ export default function Navbar() {
         <div className="">
             <div className="bg-background flex justify-between items-center border-b border-accent p-3">
                 <Image
-                    src={"/git-dark.png"}
-                    alt=""
+                    src='https://placehold.co/50x50.png'
+                    alt='logo'
                     width={50}
                     height={50}>
                 </Image>
@@ -68,7 +68,7 @@ export default function Navbar() {
                 </motion.button>
                 
                 {/* Desktop Navbar */}
-                <div className="hidden md:flex items-center gap-4">
+                <div className="hidden md:flex items-center gap-4 mr-4">
                     {routes.map(route => (
                         <Button key={route.path} variant={'ghost'} asChild>
                             <Link href={route.path}>{route.id}</Link>
@@ -76,7 +76,6 @@ export default function Navbar() {
                     ))}
                     <ModeToggle/>
                 </div>
-                    
             </div>
 
             {/* Phone Navbar */}

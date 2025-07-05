@@ -4,9 +4,7 @@ import { Gallery, Item } from 'react-photoswipe-gallery'
 import 'photoswipe/dist/photoswipe.css'
 
 import { GalleryImages } from '@/lib/types/cloudinary'
-  
-import { useState } from 'react'
-
+import Image from 'next/image'
 /** Function To create a gallery for the galey page
  * 
  * photos are rendered and generated from the public images folder for now
@@ -54,11 +52,12 @@ export default function PhotoGallery( {images}: GalleryImages) {
                   height={img.height}
                 >
                   {({ ref, open }) => (
-                    <img
+                    <Image
                     ref={ref}
                     onClick={open}
                     src={img.secure_url}
-  
+                    width={img.width}
+                    height={img.height}
                     // A bit exxessive hover transisiton
                     className="w-full h-full  cursor-pointer shadow transition-transform hover:scale-102 duration-200 rounded-xl"
                     alt={`Image ${index + 1}`}

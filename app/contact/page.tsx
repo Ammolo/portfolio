@@ -69,7 +69,7 @@ export default function Page() {
                     <CardTitle >
                         Get In Touch
                     </CardTitle>
-                    <CardDescription>Fill out the form below to reach out to me, and I'll get back to you as soon as possible.</CardDescription>
+                    <CardDescription>Fill out the form below to reach out to me, and I&lsquo;ll get back to you as soon as possible.</CardDescription>
                 </CardHeader>
 
                 <CardContent>

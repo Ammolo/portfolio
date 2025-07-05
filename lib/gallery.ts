@@ -36,13 +36,13 @@ export default async function getGallery(): Promise<GalleryImages>{
  * Is the json any type the best practice for this??
  * 
  */
-function mapResults(json: any[]): CloudinaryImage[] {
+function mapResults(json: CloudinaryImage[]): CloudinaryImage[] {
     return json.map((item) => ({
         secure_url: item.secure_url,
         width: item.width,
         height: item.height,
         format: item.format,
         filename: item.filename,
-        folder: item.asset_folder,
+        folder: item.folder,
       }));
 }
