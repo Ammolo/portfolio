@@ -4,7 +4,6 @@ import { mail_payload } from "../const";
 import { MailPayload } from "../types/mail-type";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
 
 /**
  * 
@@ -14,8 +13,10 @@ const resend = new Resend(process.env.RESEND_API_KEY);
  * regex email verification
  * form submission type
  * 
- */
+*/
 export async function resendEmail(payload: MailPayload){
+    
+    const resend = new Resend(process.env.RESEND_API_KEY);
     
     /** TODO: find a beter way for this... */
     mail_payload.name = payload.name;
